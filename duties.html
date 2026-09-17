@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    >
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+    <meta name="referrer" content="no-referrer">
+    <meta
+      name="description"
+      content="Interview-ready deep dives for the eleven Cisco Data Center Networking Product Manager responsibilities."
+    >
+    <title>Job Duties Deep Dive · DC Networking PM Interview Preparation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body data-progress-key="dcn-duties-progress">
+    <a class="skip-link" href="#main-content">Skip to duties dashboard</a>
+
+    <header class="topbar">
+      <div class="brand-lockup">
+        <span class="brand-mark" aria-hidden="true">DCN</span>
+        <span class="brand-copy">
+          <strong>Interview control room</strong>
+          <span>Job duties · evidence-first</span>
+        </span>
+      </div>
+      <nav class="site-tabs" aria-label="Site pages">
+        <a href="index.html">Home</a>
+        <a href="duties.html" aria-current="page">Job duties deep dive</a>
+      </nav>
+      <div class="top-actions">
+        <span class="privacy-chip label-wide">Public study site</span>
+        <button id="theme-toggle" type="button" aria-pressed="false" title="Toggle color theme">
+          <span aria-hidden="true">◐</span> <span data-theme-label>Dark</span>
+        </button>
+        <button id="print-page" type="button" title="Print this duties guide">
+          <span aria-hidden="true">⎙</span> <span class="label-wide">Print</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="Job duties navigation and progress">
+        <div class="sidebar-card toc-card">
+          <h2>Duty map</h2>
+          <nav class="toc" aria-label="Job duty deep dives">
+            <a href="#duties-dashboard">Answer system</a>
+            <a href="#duty-1">1 · Roadmap</a>
+            <a href="#duty-2">2 · Portfolio value</a>
+            <a href="#duty-3">3 · Requirements</a>
+            <a href="#duty-4">4 · Influence</a>
+            <a href="#duty-5">5 · Lifecycle</a>
+            <a href="#duty-6">6 · Business plan</a>
+            <a href="#duty-7">7 · Messaging</a>
+            <a href="#duty-8">8 · Content</a>
+            <a href="#duty-9">9 · Briefings</a>
+            <a href="#duty-10">10 · Events</a>
+            <a href="#duty-11">11 · GTM</a>
+            <a href="#integrated-case">Integrated case</a>
+            <a href="#evidence-pack">Evidence pack</a>
+          </nav>
+        </div>
+
+        <div class="sidebar-card">
+          <h2>Duty readiness</h2>
+          <div class="readiness">
+            <div id="readiness-ring" class="readiness-ring" role="img" aria-label="0% ready">
+              <span id="readiness-value">0%</span>
+            </div>
+            <div id="readiness-copy" class="readiness-copy">0/11 evidence checks completed locally</div>
+          </div>
+          <p class="fine-print">Saved only in this browser. Check a duty only when you can answer and defend the follow-up.</p>
+          <button id="reset-progress" type="button">Reset duty progress</button>
+        </div>
+      </aside>
+
+      <main id="main-content" class="content">
+        <section class="hero" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">Cisco · Data Center Networking · Product leadership</p>
+            <h1 id="page-title">Turn eleven duties into one operating system.</h1>
+            <p class="lede">
+              Do not answer these as isolated résumé bullets. Show how customer evidence becomes a roadmap, requirements,
+              cross-functional execution, economics, launch, adoption, and lifecycle learning.
+            </p>
+            <div class="hero-meta">
+              <span class="tag">11 complete duty playbooks</span>
+              <span class="tag">60-second answer scripts</span>
+              <span class="tag">Cisco DCN scenarios</span>
+              <span class="tag">Artifacts + metrics + probes</span>
+            </div>
+          </div>
+          <div class="hero-brief">
+            <strong>The through-line</strong>
+            <ol>
+              <li>Start with segment, job, evidence, and business outcome.</li>
+              <li>Name the decision, tradeoff, stakeholders, and decision rights.</li>
+              <li>Close with measurable outcome, learning, and next decision.</li>
+            </ol>
+          </div>
+        </section>
+
+        <div class="controls" role="search" aria-label="Filter job duty preparation">
+          <div class="field">
+            <label for="site-search">Search duties <span aria-hidden="true">/</span></label>
+            <input
+              id="site-search"
+              type="search"
+              placeholder="Try roadmap, pricing, supply chain, briefing…"
+              autocomplete="off"
+            >
+          </div>
+          <div class="field">
+            <label for="category-filter">Focus area</label>
+            <select id="category-filter">
+              <option value="all">All areas</option>
+              <option value="technical">Technical / architecture</option>
+              <option value="portfolio">Portfolio / strategy</option>
+              <option value="commercial">Commercial / lifecycle</option>
+              <option value="interview">Interview articulation</option>
+              <option value="evidence">Evidence / integrity</option>
+            </select>
+          </div>
+          <button id="clear-filter" type="button">Clear</button>
+          <button id="expand-toggle" type="button" aria-pressed="false">Expand all</button>
+          <div id="filter-status" class="filter-status" role="status" aria-live="polite"></div>
+        </div>
+        <div id="no-results" class="no-results" role="status">
+          No duty cards match. Clear the filter or search a broader term.
+        </div>
+
+        <section id="duties-dashboard" class="section" aria-labelledby="duties-dashboard-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">Answer system</p>
+              <h2 id="duties-dashboard-title">How to sound like the operating PM</h2>
+              <p class="section-summary">
+                Senior PM answers reveal judgment and mechanisms—not a list of meetings. Use the same spine at three
+                levels of depth, then tailor the evidence to the duty.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card card-accent" data-filter-item data-category="interview" data-search="answer structure context decision alignment outcome learning">
+              <h3>Five-part answer spine</h3>
+              <ol class="operating-loop">
+                <li><span><strong>Context:</strong> segment, job, constraint, evidence, and stakes.</span></li>
+                <li><span><strong>Choice:</strong> the decision you owned or recommendation you made.</span></li>
+                <li><span><strong>Alignment:</strong> disagreement, tradeoff, decision rights, and mechanism.</span></li>
+                <li><span><strong>Outcome:</strong> customer, product, commercial, and operational signals.</span></li>
+                <li><span><strong>Learning:</strong> what changed in the roadmap, process, or next decision.</span></li>
+              </ol>
+            </article>
+            <article class="card" data-filter-item data-category="interview evidence" data-search="answer depth 30 60 120 seconds">
+              <h3>Three depths</h3>
+              <p><strong>30 seconds:</strong> thesis + one mechanism + one outcome.</p>
+              <p><strong>60–90 seconds:</strong> full answer spine with one tradeoff and one metric.</p>
+              <p><strong>Deep dive:</strong> evidence quality, alternatives, stakeholders, economics, risks, and what you would do differently.</p>
+              <p class="fine-print">Stop after the concise version and let the interviewer choose the branch.</p>
+            </article>
+            <article class="card card-warning" data-filter-item data-category="evidence interview" data-search="ownership language integrity evidence">
+              <h3>Ownership language</h3>
+              <p><strong>Say:</strong> “I decided,” “I recommended,” “I aligned,” “I influenced,” or “I supported”—whichever is true.</p>
+              <p><strong>Never blur:</strong> proposal into approval, team result into sole credit, customer portfolio into product ARR, or adjacent infrastructure into Nexus roadmap ownership.</p>
+              <p class="prompt">[VERIFY] Scope, dates, baseline, mechanism, attribution, and result.</p>
+            </article>
+          </div>
+
+          <div class="table-wrap" data-filter-item data-category="interview portfolio commercial" data-search="duties capability groups strategy execution communication GTM">
+            <table>
+              <caption>Eleven duties grouped into one product operating model</caption>
+              <thead>
+                <tr>
+                  <th scope="col">System</th>
+                  <th scope="col">Duties</th>
+                  <th scope="col">Core question</th>
+                  <th scope="col">Proof artifact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Strategy</td><td>1, 2, 6</td><td>Where will Cisco play, why can it win, and what creates value?</td><td>Opportunity brief, roadmap, business case</td></tr>
+                <tr><td>Product definition</td><td>3</td><td>What problem and measurable outcome justify product investment?</td><td>PRD, acceptance scorecard, decision log</td></tr>
+                <tr><td>Execution + lifecycle</td><td>4, 5</td><td>How does the system deliver and adapt across functions and stages?</td><td>RACI, dependency plan, launch/EOL gates</td></tr>
+                <tr><td>Communication</td><td>7, 8, 9, 10</td><td>How does technical truth become audience action and market learning?</td><td>Message house, content brief, briefing plan</td></tr>
+                <tr><td>Market success</td><td>11</td><td>How do product, field, channel, and marketing convert value into adoption?</td><td>GTM plan, funnel, enablement dashboard</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="duty-1" class="section" aria-labelledby="duty-1-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">1</span> Strategy + roadmap</p>
+              <h2 id="duty-1-title">Lead the secure AI/ML and enterprise fabric roadmap</h2>
+              <p class="duty-quote">
+                Lead and collaborate with cross-functional teams to define Cisco’s Data Center Networking roadmap for
+                secure, scalable AI/ML fabrics and enterprise data center fabrics.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="portfolio technical" data-search="roadmap excellent segment outcome horizon dependencies">
+              <h3>What excellent looks like</h3>
+              <ul>
+                <li>Segments hyperscale, neocloud, sovereign/public, and enterprise by job and operating model.</li>
+                <li>Connects workload SLOs to fabric capabilities, security, operations, and economics.</li>
+                <li>Separates committed plan, option bets, discovery, and unsupported request backlog.</li>
+                <li>Sequences silicon, systems, optics, software, qualification, supply, and GTM dependencies.</li>
+                <li>Uses explicit decision rights and evidence-based portfolio reviews.</li>
+              </ul>
+            </article>
+            <article class="card" data-filter-item data-category="portfolio evidence" data-search="roadmap operating loop evidence prioritization sequencing">
+              <h3>Operating loop</h3>
+              <ol class="operating-loop">
+                <li><span>Define segment, workload, job, SLO, and economic stakes.</span></li>
+                <li><span>Triangulate customer, field, telemetry, support, competitive, and business evidence.</span></li>
+                <li><span>Frame capability options and non-goals; score value, confidence, differentiation, cost, and risk.</span></li>
+                <li><span>Map cross-layer dependencies and failure modes; sequence by learning and critical path.</span></li>
+                <li><span>Review outcome signals and change the roadmap—not just status color.</span></li>
+              </ol>
+            </article>
+            <article class="card" data-filter-item data-category="portfolio commercial" data-search="roadmap metrics artifacts decision">
+              <h3>Artifacts + scorecard</h3>
+              <p><strong>Artifacts:</strong> opportunity brief, segment/JTBD map, capability roadmap, dependency map, prioritization record, architecture review, roadmap narrative.</p>
+              <p><strong>Signals:</strong> validated-need coverage, decision latency, milestone predictability, adoption, qualified pipeline, reliability/SLO, support burden, forecast change.</p>
+              <p><strong>Guardrail:</strong> a roadmap is a set of choices and learning gates—not a feature calendar.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview portfolio technical" data-search="roadmap answer articulation Cisco scenario Nexus Hyperfabric Silicon One">
+            <summary>How to articulate it · 75-second answer</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “I would start with the segment and workload rather than a product list: training or inference,
+                  cluster scale, front-end versus back-end, reliability and security SLOs, operating model, and
+                  willingness to manage complexity. I would triangulate customer and field evidence with telemetry,
+                  support, competitive, and financial signals. Then I would frame capability bets across silicon,
+                  optics, systems, software, and operations; score the alternatives; and make dependencies and decision
+                  rights explicit. For example, an enterprise AI fabric may value validated automation, segmentation,
+                  and time-to-value differently from a neocloud optimizing scale and utilization. I would sequence
+                  investments by customer value, differentiation, critical path, and learning, then inspect adoption,
+                  SLO, economics, and support signals to revise the roadmap.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative Cisco DCN scenario</h3>
+                  <p>
+                    Evidence shows demand for higher-speed AI scale-out and simpler enterprise AI operations. The PM
+                    tests a common capability spine—secure fabric telemetry, validated design, lifecycle automation,
+                    and congestion visibility—while preserving segment-specific systems, consumption, and operations.
+                    Options could span relevant Nexus, Silicon One, optics, Nexus Dashboard/NDFC, or Hyperfabric roles;
+                    exact offer and release boundaries must be verified in current Cisco documentation.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use InSightX to show signal synthesis and roadmap proposals; use Veritas to show actual portfolio
+                    choices and lifecycle accountability. Then say: “I have not owned a Nexus roadmap. My bridge is a
+                    demonstrated evidence-to-decision mechanism plus DC infrastructure depth, and I would pair it with
+                    release-matched architecture and engineering validation.”
+                  </p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>What did you say no to, and why?</div>
+                <div><strong>Tradeoff</strong>Common platform leverage vs segment-specific optimization.</div>
+                <div><strong>Red flag</strong>Calling a backlog or presentation a roadmap.</div>
+                <div><strong>Proof</strong>Decision record with alternatives, decider, evidence, and changed outcome.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="roadmap readiness">
+            <span><input type="checkbox" data-progress="duty-1"><span>I can defend one roadmap choice, rejected alternative, dependency, metric, and my exact authority.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-2" class="section" aria-labelledby="duty-2-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">2</span> Portfolio value + growth</p>
+              <h2 id="duty-2-title">Turn portfolio capability into segment-specific business value</h2>
+              <p class="duty-quote">
+                Articulate and promote the portfolio value proposition to drive business growth, emphasizing secure,
+                scalable infrastructure for AI/ML applications and enterprise workloads.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="portfolio commercial" data-search="value proposition segment outcome proof growth">
+              <h3>Value proposition anatomy</h3>
+              <ol class="operating-loop">
+                <li><span><strong>Who:</strong> precise segment, buyer, user, and operating context.</span></li>
+                <li><span><strong>Problem:</strong> costly job, trigger, current alternative, and consequence.</span></li>
+                <li><span><strong>Outcome:</strong> time, risk, utilization, resilience, or economics—not features.</span></li>
+                <li><span><strong>Reason to believe:</strong> architecture, validation, integration, service, and proof.</span></li>
+                <li><span><strong>Action:</strong> assessment, design workshop, trial, migration, or commercial next step.</span></li>
+              </ol>
+            </article>
+            <article class="card" data-filter-item data-category="portfolio technical" data-search="AI fabric enterprise value messages">
+              <h3>Change the message by segment</h3>
+              <p><strong>Neocloud:</strong> cluster utilization, deterministic operations, rapid capacity turn-up, and scale economics.</p>
+              <p><strong>Sovereign/public:</strong> control boundaries, auditability, supply assurance, local operations, and policy evidence.</p>
+              <p><strong>Enterprise:</strong> time-to-value, skills, segmentation, supportability, migration, and coexistence.</p>
+              <p class="fine-print">Do not claim one architecture or product universally wins.</p>
+            </article>
+            <article class="card" data-filter-item data-category="commercial evidence" data-search="growth metrics bookings adoption portfolio">
+              <h3>Growth is a system</h3>
+              <p><strong>Leading:</strong> target-account engagement, validated opportunities, design wins, trials, attach, partner activation.</p>
+              <p><strong>Lagging:</strong> bookings, revenue, ARR where applicable, gross margin, renewal, expansion, adoption, referenceability.</p>
+              <p><strong>Diagnostic:</strong> stage conversion, loss reason, discount, activation lag, support burden, feature usage.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview portfolio commercial" data-search="portfolio value answer articulation growth">
+            <summary>How to articulate it · message formula + example</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “For <strong>a specific segment</strong> facing <strong>a costly job or risk</strong>, Cisco’s relevant
+                  portfolio enables <strong>a measurable customer outcome</strong>. The differentiation is not a feature
+                  inventory; it is the evidence-backed combination of architecture, silicon/systems/optics/software,
+                  security, operations, ecosystem, and lifecycle support. I would prove the claim with the right
+                  benchmark, validated design, customer outcome, or operational signal, then connect messaging to a
+                  measurable action and inspect conversion, adoption, economics, and loss reasons.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative message</h3>
+                  <p>
+                    “For enterprises building a first private AI pod, the value is not simply high port speed. It is a
+                    supportable path from design to secure operations: validated fabric choices, segmentation,
+                    observability, and an operating model the team can sustain. The proof plan would quantify deployment
+                    time, application SLO, operator effort, and lifecycle risk against the customer’s current alternative.”
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use the reported Veritas ~$28M portfolio and 20% growth contribution to show portfolio value, and
+                    Cisco ~$40M ARR / $2.5M bookings contribution to show customer-commercial linkage. State source,
+                    period, currency, baseline, team credit, and causal mechanism.
+                    <span class="prompt">[VERIFY] Every metric.</span>
+                  </p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>How did your message change buying behavior?</div>
+                <div><strong>Tradeoff</strong>Technical completeness vs a memorable decision narrative.</div>
+                <div><strong>Red flag</strong>“Best-in-class” without scope or proof.</div>
+                <div><strong>Artifact</strong>Segment message house with claim, proof, CTA, and metric.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="portfolio value readiness">
+            <span><input type="checkbox" data-progress="duty-2"><span>I can deliver one segment-specific value proposition with proof, CTA, growth metric, and attribution.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-3" class="section" aria-labelledby="duty-3-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">3</span> Product definition</p>
+              <h2 id="duty-3-title">Convert customer evidence into testable product requirements</h2>
+              <p class="duty-quote">
+                Define new product requirements and enhancements with a clear value proposition for customers.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="portfolio technical" data-search="PRD requirement customer value acceptance">
+              <h3>Requirement quality test</h3>
+              <ul>
+                <li>Named user, job, trigger, current behavior, and evidence strength.</li>
+                <li>Outcome and acceptance metric, not a prescribed implementation alone.</li>
+                <li>Scale, performance, security, reliability, operability, and lifecycle constraints.</li>
+                <li>Non-goals, dependencies, rollout, telemetry, and failure behavior.</li>
+                <li>Economic hypothesis and why now.</li>
+              </ul>
+            </article>
+            <article class="card" data-filter-item data-category="portfolio evidence" data-search="discovery evidence ladder signal requirement">
+              <h3>Evidence ladder</h3>
+              <p><strong>Weak:</strong> one loud request or competitor checkbox.</p>
+              <p><strong>Better:</strong> repeated job/pain across target accounts with observed workaround.</p>
+              <p><strong>Strong:</strong> triangulated interviews, behavior/telemetry, field/support evidence, willingness to act/pay, and representative validation.</p>
+              <p><strong>Decision:</strong> confidence is explicit; uncertainty becomes a discovery or experiment gate.</p>
+            </article>
+            <article class="card" data-filter-item data-category="commercial technical" data-search="requirement prioritization score">
+              <h3>Prioritization questions</h3>
+              <ul>
+                <li>Customer/business value and strategic fit?</li>
+                <li>How differentiated and durable?</li>
+                <li>Evidence confidence and time criticality?</li>
+                <li>Engineering, qualification, supply, support, and opportunity cost?</li>
+                <li>Can a smaller slice validate the riskiest assumption?</li>
+              </ul>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview portfolio technical" data-search="PRD articulation congestion visibility example">
+            <summary>How to articulate it · requirement example</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “I separate the customer problem from the proposed feature. I document the user and job, observed
+                  evidence, current workaround, measurable outcome, and constraints. Then I work with engineering and
+                  design to evaluate implementation options while preserving acceptance criteria and non-goals. I
+                  prioritize against customer value, strategic differentiation, confidence, cost, risk, and opportunity
+                  cost. Before full commitment, I choose the smallest representative validation that can disprove the
+                  riskiest assumption, and I instrument launch so behavior feeds the next requirement decision.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative AI-fabric enhancement</h3>
+                  <p><strong>Problem:</strong> operators cannot quickly localize congestion that degrades distributed AI job completion time.</p>
+                  <p><strong>Outcome:</strong> shorten detect-to-diagnose time while preserving secure multi-tenant operations.</p>
+                  <p><strong>Acceptance:</strong> representative topology/scale; visibility into queue, ECN, pause and path signals; bounded telemetry overhead; RBAC/API/audit behavior; actionable correlation; defined degraded/failure states.</p>
+                  <p><strong>Non-goal:</strong> promise automatic remediation before detection accuracy and safe controls are validated.</p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use InSightX to show how 200+ reported customer signals became 5+ roadmap proposals, but distinguish
+                    proposal from approval and shipped outcome. Use a Veritas PRD/MVP example for final requirement and
+                    launch accountability. Bring one sanitized requirement with before/after wording.
+                  </p>
+                  <p class="prompt">[ADD YOUR FACT] Requirement, acceptance threshold, decision, and observed outcome.</p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>What requirement did you change or kill?</div>
+                <div><strong>Tradeoff</strong>Customer-specific urgency vs reusable platform value.</div>
+                <div><strong>Red flag</strong>A feature list with no acceptance or non-goals.</div>
+                <div><strong>Artifact</strong>One-page PRD + evidence appendix + acceptance scorecard.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="requirements readiness">
+            <span><input type="checkbox" data-progress="duty-3"><span>I can show a requirement evolving from evidence through acceptance, tradeoff, decision, and post-launch learning.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-4" class="section" aria-labelledby="duty-4-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">4</span> Cross-functional influence</p>
+              <h2 id="duty-4-title">Align different incentives around one accountable decision</h2>
+              <p class="duty-quote">
+                Influence engineering, supply chain, finance, customer service, sales, and channel partners to build
+                differentiated products and drive business.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="portfolio commercial" data-search="influence stakeholders engineering supply finance sales channel service">
+              <h3>Stakeholder contract</h3>
+              <p><strong>Engineering:</strong> feasibility, architecture, quality, capacity, sequencing.</p>
+              <p><strong>Supply chain:</strong> lead time, allocation, second source, inventory, last-time buy.</p>
+              <p><strong>Finance:</strong> investment, standard cost, margin, scenarios, controls.</p>
+              <p><strong>Customer service:</strong> diagnostics, supportability, RMA, field readiness.</p>
+              <p><strong>Sales/channel:</strong> demand quality, objections, enablement, deal timing—without letting one deal become the roadmap.</p>
+            </article>
+            <article class="card" data-filter-item data-category="portfolio evidence" data-search="influence mechanism decision rights RAPID RACI">
+              <h3>Influence mechanism</h3>
+              <ol class="operating-loop">
+                <li><span>Write the decision, decider, deadline, and reversible/irreversible nature.</span></li>
+                <li><span>Make shared facts, assumptions, constraints, and disagreements visible.</span></li>
+                <li><span>Offer real alternatives with customer, technical, economic, and schedule consequences.</span></li>
+                <li><span>Pre-wire stakeholders; resolve at the lowest competent level; escalate the decision, not personalities.</span></li>
+                <li><span>Record commitment, owner, trigger, and revisit criteria.</span></li>
+              </ol>
+            </article>
+            <article class="card" data-filter-item data-category="commercial evidence" data-search="influence metrics decision latency risk burn down">
+              <h3>Measure the system</h3>
+              <p>Decision cycle time · dependency closure · risk burn-down · milestone predictability · qualification escape · supply coverage · forecast accuracy · service readiness · field activation.</p>
+              <p class="fine-print">“Everyone agreed” is not evidence of influence. Show the disagreement, mechanism, choice, and consequence.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview commercial portfolio" data-search="cross functional answer supply constraint launch scenario">
+            <summary>How to articulate it · constrained launch scenario</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “I begin by making the decision and decision rights explicit. I translate each function’s concern into
+                  the common customer and business outcome, publish assumptions and constraints, and frame alternatives
+                  rather than asking for generic alignment. I pre-wire disagreement, use evidence to narrow options,
+                  and escalate only when the accountable decider needs to choose a tradeoff. After the decision I track
+                  commitments and trigger conditions, so influence becomes an operating mechanism rather than a meeting.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative system launch</h3>
+                  <p>
+                    A high-speed system faces constrained optic supply. Engineering prefers full scope; supply needs an
+                    earlier commitment; finance sees margin exposure; service needs diagnostics/spares; sales wants a
+                    customer date; channel needs enablement. The PM frames options: staged qualification and segment
+                    gating, alternate approved optics, scope/date trade, or delayed launch. The decision record models
+                    customer impact, revenue timing, cost/margin, quality risk, inventory exposure, support readiness,
+                    and the evidence required to expand availability.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use a real Veritas lifecycle conflict or Cisco customer/product stretch decision. Be precise about
+                    who decided and how you influenced. Supply-chain/BOM proof is currently a gap; bridge with the
+                    mechanism, then state what hardware-specific owners and evidence you would engage.
+                  </p>
+                  <p class="prompt">[ADD YOUR FACT] Name the disagreement, options, decider, your action, and changed outcome.</p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>Who disagreed, and why were they rational?</div>
+                <div><strong>Tradeoff</strong>Date/revenue vs quality, margin, and lifecycle exposure.</div>
+                <div><strong>Red flag</strong>Claiming influence through escalation alone.</div>
+                <div><strong>Artifact</strong>Decision memo + RACI/RAPID + dependency/risk register.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="influence readiness">
+            <span><input type="checkbox" data-progress="duty-4"><span>I can narrate a rational conflict, decision rights, options, my influence mechanism, and the result without taking team credit.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-5" class="section" aria-labelledby="duty-5-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">5</span> Full lifecycle ownership</p>
+              <h2 id="duty-5-title">Own definition, launch, ramp, sustain, and end-of-life</h2>
+              <p class="duty-quote">
+                Own the complete product lifecycle from product definition to launch to end-of-life—and everything in between.
+              </p>
+            </div>
+          </div>
+
+          <div class="table-wrap" data-filter-item data-category="commercial portfolio" data-search="lifecycle stage gates definition launch sustain EOL">
+            <table>
+              <caption>Lifecycle gates and the PM question at each stage</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Stage</th>
+                  <th scope="col">PM decision</th>
+                  <th scope="col">Minimum evidence</th>
+                  <th scope="col">Signals</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Discover / define</td><td>Invest, experiment, defer, or reject?</td><td>Problem evidence, target segment, value, options, economics, risks</td><td>Evidence confidence, design partners, willingness to act</td></tr>
+                <tr><td>Build / validate</td><td>Is scope ready to release?</td><td>Acceptance, quality/security, scale, supply, support, compliance, telemetry</td><td>Burn-down, escapes, representative validation, cost</td></tr>
+                <tr><td>Launch</td><td>Can the whole system sell, deliver, operate, and support?</td><td>Availability, ordering, pricing, docs, enablement, support, channel, migration</td><td>Readiness exceptions, activated sellers/partners, early design wins</td></tr>
+                <tr><td>Ramp / sustain</td><td>Scale, fix, package, reprice, or focus?</td><td>Adoption, cohort, quality, support, win/loss, economics, supply</td><td>Activation, usage, attach, margin, backlog, defects, renewal/expansion</td></tr>
+                <tr><td>EOL / transition</td><td>When and how do we retire responsibly?</td><td>Installed base, contracts, replacement, inventory, regulatory/support obligations</td><td>Migration coverage, last-time buy, risk, satisfaction, cost-to-serve</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview commercial portfolio" data-search="lifecycle answer articulation launch sustain EOL">
+            <summary>How to articulate it · lifecycle ownership</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “Lifecycle ownership means the product decision persists after the PRD and launch date. During
+                  definition I establish customer value, acceptance, economics, and non-goals. During build I govern
+                  tradeoffs and readiness across engineering, security, supply, support, finance, and GTM. At launch I
+                  verify the end-to-end buying, delivery, operating, and support experience. During ramp I use adoption,
+                  quality, commercial, and support signals to change scope, packaging, investment, or enablement. At EOL
+                  I treat customer transition, contracts, supply, support, and replacement economics as product work—not
+                  an announcement task.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative networking lifecycle</h3>
+                  <p>
+                    For a new fabric system or material software capability, launch readiness includes hardware/software
+                    compatibility, optics and cable qualification, ordering/licensing, security and scale validation,
+                    upgrade/rollback, telemetry, documentation, sparing/RMA, support runbooks, sales/channel training,
+                    and migration. Sustain decisions use quality, adoption, attach, support, supply, and margin by cohort.
+                    EOL maps installed base to a supported successor with transition dates and measurable migration risk.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Lead with the Veritas portfolio where you reportedly owned PRD/MVP, pricing, launch, enhancements,
+                    sustain, and EOL. Name the product boundary, period, installed/customer impact, one post-launch change,
+                    one EOL tradeoff, and your authority.
+                  </p>
+                  <p class="prompt">[VERIFY] ~$28M portfolio and reported 20% growth attribution.</p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>What surprised you after launch?</div>
+                <div><strong>Tradeoff</strong>Feature investment vs quality, supportability, and retirement cost.</div>
+                <div><strong>Red flag</strong>Ending the story at GA.</div>
+                <div><strong>Artifact</strong>Lifecycle dashboard + launch gate + sustain review + EOL plan.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="lifecycle readiness">
+            <span><input type="checkbox" data-progress="duty-5"><span>I can show one product through definition, launch, a post-launch change, sustain economics, and an EOL/transition decision.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-6" class="section" aria-labelledby="duty-6-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">6</span> Business planning</p>
+              <h2 id="duty-6-title">Build a decision-grade market, competitive, financial, and pricing case</h2>
+              <p class="duty-quote">
+                Develop business plans for product offerings including market analysis, competitive analysis, financial models, and pricing proposals.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-4">
+            <article class="card" data-filter-item data-category="commercial evidence" data-search="market analysis TAM SAM SOM">
+              <h3>Market</h3>
+              <p>Segment and job · workload/architecture · buying center · trigger · installed base · growth driver · constraints · channel · evidence quality.</p>
+              <p class="fine-print">TAM is context; SAM/SOM must reflect offer, geography, route-to-market, timing, capacity, and credible share mechanism.</p>
+            </article>
+            <article class="card" data-filter-item data-category="commercial portfolio" data-search="competitive analysis alternatives win loss">
+              <h3>Competition</h3>
+              <p>Customer alternative · use case fit · architecture · operations · ecosystem/lock-in · maturity · time-to-value · economics · proof gaps.</p>
+              <p class="fine-print">Compare alternatives fairly; the status quo and internal build are competitors too.</p>
+            </article>
+            <article class="card" data-filter-item data-category="commercial" data-search="financial model forecast margin BOM scenarios">
+              <h3>Financial model</h3>
+              <p>Units/timing/mix · ASP waterfall · attach · services/subscription · standard cost/BOM · yield/freight/warranty · opex · gross margin · cash/inventory · base/upside/downside.</p>
+            </article>
+            <article class="card" data-filter-item data-category="commercial" data-search="pricing packaging value willingness discount">
+              <h3>Pricing</h3>
+              <p>Value metric · willingness-to-pay evidence · competitive anchors · package/fence · channel economics · discount governance · migration · price realization.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview commercial portfolio" data-search="business plan answer fictional model pricing">
+            <summary>How to articulate it · fictional decision case</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “I build business plans to make an investment decision, not to produce one precise forecast. I start
+                  with a segment and job, triangulate market evidence, and define the realistic serviceable opportunity.
+                  I compare customer alternatives on use case, operations, ecosystem, maturity, time-to-value, and TCO.
+                  Then I model unit/timing/mix, ASP waterfall, attach, cost, margin, opex, supply and scenarios, making
+                  assumptions and sensitivity visible. Pricing begins with value and willingness to pay, then accounts
+                  for package fences, channel economics, discount governance, and migration. I recommend an option,
+                  leading indicators, downside triggers, and the next learning gate.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Clearly fictional example</h3>
+                  <p>
+                    A target segment has 120 addressable fabric opportunities over three years. At an illustrative
+                    $600k average system-and-software value, the gross serviceable opportunity is $72M—not a forecast.
+                    A base case assumes 18 wins, $560k realized value, 15% software/service attach, 34% blended gross
+                    margin, and staged supply. Upside/downside vary win rate, ramp timing, ASP, optic/memory cost, mix,
+                    discount, and qualification. The investment gate requires design partners, validated willingness to
+                    pay, target cost confidence, and two repeatable use cases.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use Veritas pricing/portfolio ownership and Cisco ARR, pipeline, and bookings exposure. Prepare one
+                    real decision where a forecast assumption changed pricing, packaging, scope, or investment. For
+                    hardware economics, state the gap and show the model you would build with finance and supply chain.
+                  </p>
+                  <p class="prompt">[ADD YOUR FACT] Forecast period, assumptions, error, decision, and learning.</p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>Which assumption drives the decision most?</div>
+                <div><strong>Tradeoff</strong>Share/ramp vs discount, margin, capacity, and support burden.</div>
+                <div><strong>Red flag</strong>Top-down TAM presented as a forecast.</div>
+                <div><strong>Artifact</strong>Business-case workbook + assumptions + sensitivity + decision memo.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="business plan readiness">
+            <span><input type="checkbox" data-progress="duty-6"><span>I can rebuild a base/upside/downside case, explain the price waterfall, and name the assumption that changed my recommendation.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-7" class="section" aria-labelledby="duty-7-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">7</span> Technical messaging</p>
+              <h2 id="duty-7-title">Simplify without making the technical truth false</h2>
+              <p class="duty-quote">Translate product capabilities into simple, compelling messages that resonate with customers.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="interview technical" data-search="message technical simple audience">
+              <h3>Translation ladder</h3>
+              <p><strong>Mechanism:</strong> what the technology actually does and under what conditions.</p>
+              <p><strong>Operational effect:</strong> what changes for design, deployment, troubleshooting, or risk.</p>
+              <p><strong>Business outcome:</strong> time, utilization, resilience, exposure, or economics.</p>
+              <p><strong>Proof + boundary:</strong> evidence, prerequisites, and what is not promised.</p>
+            </article>
+            <article class="card" data-filter-item data-category="technical interview" data-search="PFC ECN DCQCN CFO explanation">
+              <h3>Same truth, three audiences</h3>
+              <p><strong>Engineer:</strong> ECN marks queue pressure; sender control responds; scoped PFC may protect selected traffic but creates pause-domain risks.</p>
+              <p><strong>Operator:</strong> detect congestion early, maintain stable goodput, and avoid turning pause into a fabric-wide failure mode.</p>
+              <p><strong>Executive:</strong> protect expensive compute productivity with observable, bounded congestion behavior—without claiming zero loss or zero risk.</p>
+            </article>
+            <article class="card" data-filter-item data-category="portfolio evidence" data-search="message house claim proof boundary CTA">
+              <h3>Message house</h3>
+              <p><strong>Roof:</strong> one customer outcome.</p>
+              <p><strong>Pillars:</strong> three differentiated reasons to believe.</p>
+              <p><strong>Foundation:</strong> proof, prerequisites, limitations, and customer evidence.</p>
+              <p><strong>Door:</strong> one next action.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview technical portfolio" data-search="simplify answer articulation message">
+            <summary>How to articulate it · executive-safe explanation</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “I simplify by preserving the causal chain. I first make sure I can explain the mechanism and
+                  prerequisites to an engineer. Then I translate the operational change and business outcome for the
+                  target audience. I remove acronyms that do not affect the decision, but I keep boundaries, tradeoffs,
+                  and proof. My test is whether an executive can repeat the decision and value accurately, while an
+                  engineer still recognizes the technical truth. Every message ends with evidence and a clear next
+                  action.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative portfolio message</h3>
+                  <p>
+                    Instead of “400G/800G, EVPN, telemetry, automation,” say: “Build AI capacity on a fabric your team
+                    can deploy, isolate, observe, and evolve—with architecture and operations matched to your workload
+                    and skills.” Then prove each term with release-scoped design, validation, and customer-specific
+                    outcome criteria.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use an executive/customer explanation from your CSM role and a technical explanation from Cisco
+                    Live. Prepare the same concept for an engineer, CIO, CFO, seller, and partner. Ask a listener to
+                    repeat the takeaway; refine what they misstate.
+                  </p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>Explain lossless Ethernet to a CFO.</div>
+                <div><strong>Tradeoff</strong>Simplicity vs preserving assumptions and risk.</div>
+                <div><strong>Red flag</strong>Feature dump or unsupported superlative.</div>
+                <div><strong>Artifact</strong>Audience message matrix + message house + proof sheet.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="messaging readiness">
+            <span><input type="checkbox" data-progress="duty-7"><span>I can explain one AI-fabric concept to five audiences while preserving mechanism, proof, limitation, and CTA.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-8" class="section" aria-labelledby="duty-8-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">8</span> Product marketing content</p>
+              <h2 id="duty-8-title">Build content that advances a customer or field decision</h2>
+              <p class="duty-quote">
+                Build impactful product marketing content and collateral such as presentations, blogs, and videos.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="commercial interview" data-search="content brief audience funnel CTA">
+              <h3>Content brief before format</h3>
+              <ul>
+                <li>Audience, buying stage, job, objection, and desired action.</li>
+                <li>Single promise, proof, technical boundary, and claim owner.</li>
+                <li>Format and channel chosen for the behavior—not preference.</li>
+                <li>Distribution, localization, accessibility, reuse, and shelf life.</li>
+                <li>Measurement plan tied to next action and adoption.</li>
+              </ul>
+            </article>
+            <article class="card" data-filter-item data-category="commercial portfolio" data-search="content system launch kit presentation blog video demo">
+              <h3>One thesis, multiple assets</h3>
+              <p><strong>Executive deck:</strong> decision, value, proof, roadmap boundary.</p>
+              <p><strong>Technical brief:</strong> architecture, prerequisites, scale, operations, validation.</p>
+              <p><strong>Blog/video:</strong> why now, insight, accessible proof, CTA.</p>
+              <p><strong>Seller/partner kit:</strong> qualification, discovery, objections, competitive guardrails.</p>
+              <p><strong>Demo:</strong> customer job and outcome—not a UI tour.</p>
+            </article>
+            <article class="card" data-filter-item data-category="commercial evidence" data-search="content metrics attribution">
+              <h3>Impact hierarchy</h3>
+              <p><strong>Reach:</strong> target-account consumption, completion, qualified audience.</p>
+              <p><strong>Behavior:</strong> workshop/trial request, seller reuse, partner activation, next meeting.</p>
+              <p><strong>Pipeline/adoption:</strong> influenced opportunity with defined attribution, design win, activation, feature use.</p>
+              <p class="fine-print">Views alone are a weak success metric.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview commercial portfolio" data-search="content answer articulation launch campaign">
+            <summary>How to articulate it · content system example</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “I treat content as part of the product and buying journey. Before choosing a deck, blog, or video, I
+                  define the audience, decision stage, objection, desired action, core claim, proof, and technical
+                  boundary. I create a modular source of truth so executive, technical, seller, and partner assets stay
+                  consistent. I review claims with the accountable technical and legal owners, instrument distribution
+                  and next actions, and use field/customer feedback to improve both the content and product narrative.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative secure AI-fabric launch kit</h3>
+                  <p>
+                    A 12-slide executive narrative, technical architecture brief, five-minute explainer, demo script,
+                    discovery guide, objection card, partner module, and customer workshop. All derive from one approved
+                    message/proof sheet. Success is target-account workshops, qualified designs, seller/partner reuse,
+                    activation, and repeated objections—not asset count.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use Cisco Live as a high-quality presentation example, then add one blog, video, deck, playbook, or
+                    customer asset you personally shaped. State audience, decision, your contribution, distribution,
+                    observed action, and learning.
+                  </p>
+                  <p class="prompt">[ADD YOUR FACT] Artifact, reach, action, pipeline/adoption link, and attribution.</p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>What content changed adoption or sales execution?</div>
+                <div><strong>Tradeoff</strong>Launch speed vs claim quality and field usability.</div>
+                <div><strong>Red flag</strong>Listing assets without audience action.</div>
+                <div><strong>Artifact</strong>Content brief + modular message/proof sheet + impact dashboard.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="content readiness">
+            <span><input type="checkbox" data-progress="duty-8"><span>I can show one content artifact, its audience decision, my contribution, measured next action, and resulting iteration.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-9" class="section" aria-labelledby="duty-9-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">9</span> Customer + partner briefings</p>
+              <h2 id="duty-9-title">Turn briefings into discovery, decisions, and durable relationships</h2>
+              <p class="duty-quote">Provide solution/product briefings to customers or partners and cultivate relationships.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="commercial interview" data-search="customer briefing flow discovery">
+              <h3>Briefing flow</h3>
+              <ol class="operating-loop">
+                <li><span>Pre-brief account, audience, architecture, decision, sensitivities, and success.</span></li>
+                <li><span>Discover current state, job, constraint, evidence, alternatives, and decision process.</span></li>
+                <li><span>Reflect the problem and tailor only relevant value, architecture, proof, and tradeoffs.</span></li>
+                <li><span>Handle objections by clarifying fact, assumption, risk, owner, and validation.</span></li>
+                <li><span>Close mutual actions, decision date, owners, and product feedback disposition.</span></li>
+              </ol>
+            </article>
+            <article class="card" data-filter-item data-category="portfolio evidence" data-search="relationship trust briefing follow up">
+              <h3>Relationship mechanism</h3>
+              <p>Remember context · close loops · say what is unknown · protect confidentiality · bring relevant experts · do not overpromise roadmap · return with evidence · share how feedback was dispositioned.</p>
+              <p class="fine-print">Trust is repeated reliable behavior, not executive access alone.</p>
+            </article>
+            <article class="card" data-filter-item data-category="commercial evidence" data-search="briefing metrics next step feedback">
+              <h3>Outcome signals</h3>
+              <p>Decision-maker coverage · discovery completeness · agreed next step · validation/workshop · qualified opportunity · adoption plan · objection resolution · roadmap evidence quality · reference willingness.</p>
+              <p><strong>Separate:</strong> customer outcome, deal outcome, product learning, and your personal contribution.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview technical commercial" data-search="briefing answer enterprise AI migration">
+            <summary>How to articulate it · enterprise AI briefing</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “A strong briefing is a decision conversation, not a standard presentation. I align internally on the
+                  customer context and success criteria, then spend enough time discovering the workload, estate,
+                  operating model, constraints, alternatives, and buying process. I reflect the problem before mapping
+                  relevant portfolio value and architecture. I am explicit about prerequisites, roadmap boundaries, and
+                  what requires engineering validation. I close with mutual actions and capture feedback in a product
+                  evidence system, then close the loop with the customer.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative customer conversation</h3>
+                  <p>
+                    An enterprise wants private AI without destabilizing its EVPN/ACI estate. Discover workload and data
+                    path, cluster growth, failure/security boundaries, team skills, automation source of truth, support
+                    model, migration tolerance, and economics. Compare relevant architecture paths without forcing a
+                    product. Agree a representative design workshop with SLO, operations, security, migration, and TCO
+                    acceptance criteria.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    This is a strength from Senior CSM work. Use one executive briefing where discovery changed the
+                    recommendation, a product signal, adoption plan, or commercial motion. Protect customer identity and
+                    confidential detail. Quantify only what you can attribute.
+                  </p>
+                  <p class="prompt">[ADD YOUR FACT] Customer context, changed decision, follow-up, and product learning.</p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>How did a briefing change roadmap or deal motion?</div>
+                <div><strong>Tradeoff</strong>Customer urgency vs roadmap and validation integrity.</div>
+                <div><strong>Red flag</strong>Presenting for 55 minutes with no discovery.</div>
+                <div><strong>Artifact</strong>Pre-brief + discovery map + mutual action plan + feedback disposition.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="briefing readiness">
+            <span><input type="checkbox" data-progress="duty-9"><span>I can show how one briefing changed a decision and how I closed the customer and product feedback loops.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-10" class="section" aria-labelledby="duty-10-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">10</span> Vision + events</p>
+              <h2 id="duty-10-title">Represent Cisco’s vision with credibility and a feedback loop</h2>
+              <p class="duty-quote">
+                Represent or present Cisco’s Data Center Networking vision and solution/product innovations at internal and external events.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="portfolio interview" data-search="event narrative vision keynote">
+              <h3>Vision narrative</h3>
+              <p><strong>Why now:</strong> customer/technology shift and stakes.</p>
+              <p><strong>Point of view:</strong> a defensible thesis, not trend repetition.</p>
+              <p><strong>Architecture:</strong> how the system creates the outcome.</p>
+              <p><strong>Proof:</strong> sourced capability, validation, customer or ecosystem evidence.</p>
+              <p><strong>Invitation:</strong> what the audience should test, build, or discuss next.</p>
+            </article>
+            <article class="card" data-filter-item data-category="evidence interview" data-search="event preparation claims rehearsal Q&A">
+              <h3>Speaker operating plan</h3>
+              <ul>
+                <li>Audience insight and one desired takeaway/action.</li>
+                <li>Claim/evidence review; roadmap, legal, security, and confidentiality boundaries.</li>
+                <li>Story arc, original visuals, demo contingency, timing, accessibility.</li>
+                <li>Rehearsal under challenge; likely Q&amp;A and honest unknowns.</li>
+                <li>Capture questions/objections and route them into content/product loops.</li>
+              </ul>
+            </article>
+            <article class="card" data-filter-item data-category="commercial evidence" data-search="event metrics engagement follow up">
+              <h3>Beyond applause</h3>
+              <p>Target-audience attendance · completion · qualified questions · follow-up workshops · seller/partner reuse · target-account engagement · product insight · speaking/reference invitation.</p>
+              <p class="fine-print">Audience size is context, not outcome.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview portfolio technical" data-search="event answer Cisco Live Distinguished Speaker">
+            <summary>How to articulate it · event leadership</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “Representing Cisco means making a clear, technically credible point of view that serves the audience
+                  and protects trust. I start with the audience decision and one thesis, build a why-now to architecture
+                  to proof narrative, and review every material claim and roadmap boundary with the right owners. I
+                  rehearse for timing, challenge, and failure contingencies. During and after the event I treat
+                  questions and objections as market evidence, route them to product and content owners, and measure
+                  meaningful follow-up rather than only attendance.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative 12-minute talk</h3>
+                  <p>
+                    1 minute: AI infrastructure stakes. 2 minutes: workload and fabric problem. 3 minutes: Cisco point
+                    of view across secure architecture and operations. 3 minutes: one architecture and tradeoffs.
+                    2 minutes: proof and boundaries. 1 minute: customer action. Prepare concise answers on Ethernet vs
+                    InfiniBand, congestion, security, sovereignty, operations, availability, and TCO.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use your Cisco Live Distinguished Speaker example. Verify event, session title, date, audience,
+                    your thesis, preparation, difficult question, observable engagement, and how feedback changed a
+                    follow-up artifact or product conversation.
+                  </p>
+                  <p class="prompt">[VERIFY] Distinguished Speaker designation and session details.</p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>What was your thesis—not your topic?</div>
+                <div><strong>Tradeoff</strong>Bold vision vs sourced claims and roadmap boundaries.</div>
+                <div><strong>Red flag</strong>Reciting portfolio slides without audience relevance.</div>
+                <div><strong>Artifact</strong>Talk brief + claim sheet + Q&amp;A bank + post-event insight log.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="events readiness">
+            <span><input type="checkbox" data-progress="duty-10"><span>I can state one event thesis, claim boundary, difficult question, audience action, and feedback-driven follow-up.</span></span>
+          </label>
+        </section>
+
+        <section id="duty-11" class="section" aria-labelledby="duty-11-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker"><span class="duty-number">11</span> GTM + market success</p>
+              <h2 id="duty-11-title">Make product, marketing, sales, and channel one learning system</h2>
+              <p class="duty-quote">
+                Partner with the broader marketing and sales team to amplify product messaging and drive market success.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="commercial portfolio" data-search="GTM ideal customer profile use case launch">
+              <h3>GTM design</h3>
+              <ul>
+                <li>ICP/segment, buying center, trigger, use case, and qualification.</li>
+                <li>Value/message/proof and competitive guardrails.</li>
+                <li>Offer, packaging, price, route-to-market, partner role, and capacity.</li>
+                <li>Enablement, demand, design/validation, ordering, activation, adoption, and expansion.</li>
+                <li>Feedback cadence with product disposition and field closure.</li>
+              </ul>
+            </article>
+            <article class="card" data-filter-item data-category="commercial evidence" data-search="pipeline bookings revenue adoption definitions">
+              <h3>Funnel discipline</h3>
+              <p><strong>Pipeline:</strong> qualified potential, with stage and probability rules.</p>
+              <p><strong>Bookings:</strong> accepted order/contract under company policy.</p>
+              <p><strong>Revenue:</strong> recognized under accounting policy.</p>
+              <p><strong>Adoption:</strong> activated and valuable use.</p>
+              <p><strong>Attribution:</strong> sourced, influenced, assisted, or product-led—defined before reporting.</p>
+            </article>
+            <article class="card" data-filter-item data-category="commercial portfolio" data-search="GTM metrics dashboard">
+              <h3>Market-success dashboard</h3>
+              <p>Target-account coverage · qualified pipeline · stage conversion · win/loss · ASP/discount · partner activation · design-to-order · order-to-activation · attach · adoption · support · expansion · margin.</p>
+              <p><strong>Cohort by:</strong> segment, use case, architecture, region, route, seller/partner, launch wave.</p>
+            </article>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview commercial portfolio" data-search="GTM answer sales marketing partner">
+            <summary>How to articulate it · launch-to-adoption system</summary>
+            <div class="details-body">
+              <div class="answer-script">
+                <p>
+                  “I partner with marketing, sales, and channel before launch—not after the product is built. Together we
+                  define the ICP, use cases, buying center, qualification, value/proof, competitive guardrails, offer,
+                  route-to-market, and adoption motion. Product owns the truth and learning loop; marketing scales the
+                  narrative and demand; sales and partners turn it into discovery, design, and commercial execution. I
+                  instrument the full path from target engagement through activation and value, segment conversion and
+                  loss reasons, and use field feedback to change product, packaging, proof, or enablement.”
+                </p>
+              </div>
+              <div class="grid grid-2">
+                <div>
+                  <h3>Illustrative enterprise AI motion</h3>
+                  <p>
+                    Target enterprises planning a first or next private AI pod. Launch a qualification guide, executive
+                    value story, architecture workshop, validated design path, partner module, ordering/implementation
+                    readiness, and adoption review. Segment by existing fabric/operations and workload. Measure qualified
+                    workshops, design wins, conversion, time to activation, attach, operational outcomes, support, and
+                    expansion; inspect objections to adjust offer and roadmap.
+                  </p>
+                </div>
+                <div>
+                  <h3>Your honest bridge</h3>
+                  <p>
+                    Use Cisco CSM/sales partnership and reported $2.5M closed bookings / earlier $5M pipeline. Define
+                    sourced versus influenced, period, currency, stage, account-team contribution, your mechanism, and
+                    whether the product was adopted—not just sold.
+                  </p>
+                  <p class="prompt">[VERIFY] Pipeline/bookings windows and avoid double counting.</p>
+                </div>
+              </div>
+              <div class="evidence-strip">
+                <div><strong>Probe</strong>What did you do versus marketing and account teams?</div>
+                <div><strong>Tradeoff</strong>Broad awareness vs repeatable segment/use-case conversion.</div>
+                <div><strong>Red flag</strong>Equating pipeline with revenue or market success.</div>
+                <div><strong>Artifact</strong>GTM brief + launch dashboard + win/loss + field feedback disposition.</div>
+              </div>
+            </div>
+          </details>
+          <label class="card checklist" data-filter-item data-category="evidence interview" data-search="GTM readiness">
+            <span><input type="checkbox" data-progress="duty-11"><span>I can define the ICP-to-adoption motion, each team’s role, funnel definitions, my attribution, and one feedback-driven change.</span></span>
+          </label>
+        </section>
+
+        <section id="integrated-case" class="section" aria-labelledby="integrated-case-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">Synthesis</p>
+              <h2 id="integrated-case-title">One case that demonstrates all eleven duties</h2>
+              <p class="section-summary">
+                Use this fictional case to practice the product operating system. Never present it as Cisco’s actual roadmap,
+                forecast, price, customer decision, or launch plan.
+              </p>
+            </div>
+          </div>
+
+          <article class="card card-accent" data-filter-item data-category="portfolio technical commercial interview" data-search="integrated case enterprise AI fabric launch">
+            <h3>Illustrative case · secure enterprise AI fabric offer</h3>
+            <p>
+              Discovery suggests a target enterprise segment wants faster private-AI deployment without fragmenting
+              security and operations. The PM evaluates a validated fabric/operations offer using only currently supported,
+              release-matched Cisco components appropriate to the use case.
+            </p>
+            <div class="grid grid-3">
+              <div>
+                <h4>1–3 · Strategy, value, requirements</h4>
+                <p>Segment/JTBD and architecture evidence → capability roadmap → outcome/message → PRD with deployment, segmentation, telemetry, scale, lifecycle, and economic acceptance.</p>
+              </div>
+              <div>
+                <h4>4–6 · Execution, lifecycle, economics</h4>
+                <p>Engineering/supply/finance/service/field decision system → representative validation and launch gates → segment model, alternatives, scenarios, package, and price.</p>
+              </div>
+              <div>
+                <h4>7–11 · Communication + market success</h4>
+                <p>Audience message house → modular launch content → customer/partner workshops → event thesis → ICP-to-adoption GTM with cohort feedback into roadmap.</p>
+              </div>
+            </div>
+          </article>
+
+          <div class="table-wrap" data-filter-item data-category="interview evidence" data-search="mock interview questions integrated duties">
+            <table>
+              <caption>Executive review questions for the integrated case</caption>
+              <thead>
+                <tr><th scope="col">Question</th><th scope="col">Strong answer must expose</th><th scope="col">Failure mode</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Why this segment and why now?</td><td>Evidence, job, stakes, alternatives, strategic fit, uncertainty</td><td>Trend/TAM assertion</td></tr>
+                <tr><td>What is the differentiated product decision?</td><td>Outcome, architecture boundary, options, non-goals, proof</td><td>Feature bundle</td></tr>
+                <tr><td>What must be true financially?</td><td>Unit/timing/mix, price realization, cost/margin, scenarios, trigger</td><td>Single-point revenue forecast</td></tr>
+                <tr><td>What could stop launch?</td><td>Quality/security, supply, support, ordering, channel, migration, evidence gates</td><td>Engineering-complete equals launch-ready</td></tr>
+                <tr><td>How will the market learn and respond?</td><td>Message/proof, content, briefing, event, GTM, adoption, feedback loop</td><td>Campaign impressions</td></tr>
+                <tr><td>What do you personally decide?</td><td>Decision rights, influence, escalation, integrity of ownership language</td><td>“I align everyone”</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <details class="card" open data-filter-item data-category="interview portfolio commercial" data-search="90 day plan duties role">
+            <summary>Your first 90 days in the role</summary>
+            <div class="details-body">
+              <div class="grid grid-3">
+                <div>
+                  <h3>Days 0–30 · Learn and map</h3>
+                  <ul>
+                    <li>Portfolio, roadmap, architecture, release, supply, economics, field, support, and decision map.</li>
+                    <li>Top segments/jobs, customers/partners, opportunities, losses, quality/support themes.</li>
+                    <li>Agree success metrics and ownership boundaries.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Days 31–60 · Test and focus</h3>
+                  <ul>
+                    <li>Validate priority hypotheses with customers, field, telemetry, engineering, finance, and supply.</li>
+                    <li>Audit one launch/ramp and one roadmap decision.</li>
+                    <li>Propose one evidence/decision mechanism improvement.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Days 61–90 · Decide and deliver</h3>
+                  <ul>
+                    <li>Recommend one scoped roadmap or GTM choice with alternatives and economics.</li>
+                    <li>Close one cross-functional risk or customer feedback loop.</li>
+                    <li>Publish the operating cadence, dashboard, and next learning gates.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+        </section>
+
+        <section id="evidence-pack" class="section" aria-labelledby="evidence-pack-title">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">Interview proof</p>
+              <h2 id="evidence-pack-title">Build the evidence pack before rehearsing harder</h2>
+              <p class="section-summary">
+                One strong, defensible artifact can support several duties. Sanitize confidential content and preserve
+                only enough structure to explain your judgment.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card" data-filter-item data-category="evidence interview" data-search="evidence pack strategy product">
+              <h3>Strategy + product</h3>
+              <ul>
+                <li>One opportunity/segment brief.</li>
+                <li>One roadmap decision with rejected option.</li>
+                <li>One before/after requirement and acceptance metric.</li>
+                <li>One prioritization record with decider and learning.</li>
+              </ul>
+            </article>
+            <article class="card" data-filter-item data-category="evidence interview" data-search="evidence pack execution commercial lifecycle">
+              <h3>Execution + commercial</h3>
+              <ul>
+                <li>One cross-functional conflict/decision map.</li>
+                <li>One launch/ramp dashboard and post-launch change.</li>
+                <li>One EOL/transition case.</li>
+                <li>One forecast/pricing model with sensitivity and error.</li>
+              </ul>
+            </article>
+            <article class="card" data-filter-item data-category="evidence interview" data-search="evidence pack communication GTM">
+              <h3>Communication + market</h3>
+              <ul>
+                <li>One technical-to-executive message transformation.</li>
+                <li>One content asset and measured next action.</li>
+                <li>One customer briefing that changed a decision.</li>
+                <li>One event thesis and one GTM feedback-driven change.</li>
+              </ul>
+            </article>
+          </div>
+
+          <article class="card card-warning" data-filter-item data-category="evidence interview" data-search="final integrity anti overclaim">
+            <h3>Final quality gate</h3>
+            <p>
+              For every example, write: source, date/period, product boundary, customer anonymity rule, baseline,
+              numerator/denominator, currency, personal action, team contribution, decision authority, counterfactual,
+              result, limitation, and what you learned. Remove or label anything you cannot verify.
+            </p>
+            <p>
+              This page uses illustrative Cisco DCN scenarios to practice judgment. They are not Cisco roadmap,
+              availability, pricing, forecast, customer, or configuration claims. Validate current product and release
+              details against the <a href="index.html#source-register">Home source register</a>.
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <footer class="disclaimer">
+      Public, independent interview preparation. Illustrative scenarios are not Cisco plans or customer facts. Not
+      endorsed by Cisco and not a substitute for current product guides, release notes, legal review, or change control.
+    </footer>
+  </body>
+</html>

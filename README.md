@@ -1,11 +1,13 @@
 # Data Center Networking PM interview preparation
 
-Public, single-page preparation guide for a 15-minute hiring-manager conversation about Cisco's
+Public, two-page preparation guide for a 15-minute hiring-manager conversation about Cisco's
 Senior / Engineering Product Manager, Data Center Networking role. It combines a call dashboard, role traceability,
 candidate evidence checks, AI and enterprise data-center networking study material, product/commercial frameworks,
-tailored interview stories, and a reviewed source register.
+tailored interview stories, a reviewed source register, and a separate eleven-duty interview deep dive.
 
 **Published site:** <https://frankellydeleon.github.io/dc-networking-pm-interview-prep/>
+
+**Job duties deep dive:** <https://frankellydeleon.github.io/dc-networking-pm-interview-prep/duties.html>
 
 > **Public-content warning:** this repository and its GitHub Pages site are public by explicit owner choice. Do not add
 > customer/Cisco confidential information, secrets, private roadmap details, or personal claims that should not be
@@ -33,6 +35,7 @@ that browser's local storage. Clicking a source link leaves the local site and c
 | Path | Purpose |
 |---|---|
 | `index.html` | All interview, technical, commercial, traceability, source, and integrity content |
+| `duties.html` | Deep-dive playbooks, examples, answer scripts, artifacts, metrics, and probes for all 11 job duties |
 | `styles.css` | Responsive visual design, accessibility states, diagrams, dark theme, and print layout |
 | `app.js` | Dependency-free local interactions and readiness persistence |
 | `scripts/validate.mjs` | Structural, content, citation, syntax, placeholder, dependency, and publication checks |
@@ -66,6 +69,7 @@ With the local server running, Node.js 22+ and Chrome/Edge installed:
 
 ```bash
 node scripts/browser-smoke.mjs http://127.0.0.1:8000/
+node scripts/browser-smoke.mjs http://127.0.0.1:8000/duties.html
 node scripts/browser-smoke.mjs http://127.0.0.1:8000/ --screenshot /tmp/dcn-prep.png
 ```
 

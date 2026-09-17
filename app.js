@@ -18,7 +18,7 @@
   const readinessCopy = document.querySelector("#readiness-copy");
   const resetProgress = document.querySelector("#reset-progress");
   const THEME_KEY = "dcn-prep-theme";
-  const PROGRESS_KEY = "dcn-prep-progress";
+  const PROGRESS_KEY = document.body.dataset.progressKey || "dcn-prep-progress";
   let printOpenState = [];
 
   const normalize = (value) =>

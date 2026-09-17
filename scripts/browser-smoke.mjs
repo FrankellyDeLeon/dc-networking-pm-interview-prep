@@ -158,8 +158,10 @@ try {
 
   const initial = await devtools.evaluate(`(() => ({
     title: document.title,
+    isDuties: Boolean(document.querySelector("#duties-dashboard")),
     cards: document.querySelectorAll("[data-filter-item]").length,
     sections: document.querySelectorAll("main section[id]").length,
+    dutySections: document.querySelectorAll("main section[id^='duty-']").length,
     sources: document.querySelectorAll(".source-entry").length,
     sourceTitles: document.querySelectorAll(".source-entry .source-title").length,
     sourceSupport: document.querySelectorAll(".source-entry .source-support").length,
@@ -168,6 +170,9 @@ try {
     skip: document.querySelector(".skip-link")?.getAttribute("href"),
     theme: document.documentElement.dataset.theme,
     readiness: document.querySelector("#readiness-ring")?.getAttribute("aria-label"),
+    progressKey: document.body.dataset.progressKey || "dcn-prep-progress",
+    pageTabs: document.querySelectorAll(".site-tabs a").length,
+    currentPageTabs: document.querySelectorAll(".site-tabs a[aria-current='page']").length,
     h1Count: document.querySelectorAll("h1").length,
     unnamedButtons: [...document.querySelectorAll("button")].filter((button) => !button.textContent.trim() && !button.getAttribute("aria-label")).length,
     unlabelledFields: [...document.querySelectorAll("input, select")].filter((field) => {
@@ -180,18 +185,27 @@ try {
   }))()`);
   assert(initial.title.includes("DC Networking"), "Expected page title was not rendered.");
   assert(initial.cards >= 50, `Expected at least 50 filterable cards; found ${initial.cards}.`);
-  assert(initial.sections >= 23, `Expected at least 23 main sections; found ${initial.sections}.`);
-  assert(initial.sources >= 20, `Expected at least 20 rendered source entries; found ${initial.sources}.`);
   assert(
-    initial.sourceTitles === initial.sources &&
-      initial.sourceSupport === initial.sources &&
-      initial.sourceUrls >= initial.sources,
-    `Rendered source register is incomplete: ${initial.sourceTitles} titles, ${initial.sourceSupport} support notes, and ${initial.sourceUrls} URLs for ${initial.sources} entries.`
+    initial.sections >= (initial.isDuties ? 14 : 23),
+    `Expected complete page sections; found ${initial.sections}.`
   );
+  if (initial.isDuties) {
+    assert(initial.dutySections === 11, `Expected 11 duty deep dives; found ${initial.dutySections}.`);
+    assert(initial.sources === 0, "Job duties page should use the canonical Home source register.");
+  } else {
+    assert(initial.sources >= 20, `Expected at least 20 rendered source entries; found ${initial.sources}.`);
+    assert(
+      initial.sourceTitles === initial.sources &&
+        initial.sourceSupport === initial.sources &&
+        initial.sourceUrls >= initial.sources,
+      `Rendered source register is incomplete: ${initial.sourceTitles} titles, ${initial.sourceSupport} support notes, and ${initial.sourceUrls} URLs for ${initial.sources} entries.`
+    );
+  }
   assert(initial.status?.includes("preparation cards shown"), "Application initialization status is missing.");
   assert(initial.skip === "#main-content", "Skip link target is incorrect.");
   assert(initial.theme === "light", "Fresh browser profile should initialize the declared light theme.");
   assert(initial.readiness?.startsWith("0% ready"), "Fresh browser profile should initialize readiness at zero.");
+  assert(initial.pageTabs === 2 && initial.currentPageTabs === 1, "Cross-page navigation tabs are incomplete.");
   assert(initial.h1Count === 1, `Expected one page-level h1; found ${initial.h1Count}.`);
   assert(initial.unnamedButtons === 0, `Found ${initial.unnamedButtons} unnamed buttons.`);
   assert(initial.unlabelledFields === 0, `Found ${initial.unlabelledFields} unlabelled form fields.`);
@@ -207,7 +221,7 @@ try {
 
   const filtered = await devtools.evaluate(`(() => {
     const input = document.querySelector("#site-search");
-    input.value = "RoCE";
+    input.value = document.querySelector("#duties-dashboard") ? "pricing" : "RoCE";
     input.dispatchEvent(new Event("input", { bubbles: true }));
     return {
       hidden: document.querySelectorAll("[data-filter-item].is-filtered").length,
@@ -252,10 +266,11 @@ try {
   const progressed = await devtools.evaluate(`(() => {
     const first = document.querySelector("[data-progress]");
     first.click();
+    const key = document.body.dataset.progressKey || "dcn-prep-progress";
     return {
       checked: first.checked,
       label: document.querySelector("#readiness-ring").getAttribute("aria-label"),
-      stored: localStorage.getItem("dcn-prep-progress")
+      stored: localStorage.getItem(key)
     };
   })()`);
   assert(progressed.checked && !progressed.label.startsWith("0%"), "Readiness interaction did not update the meter.");
@@ -271,13 +286,17 @@ try {
   })()`);
   assert(expanded.total > 10 && expanded.open === expanded.total, "Expand-all interaction did not open every visible details card.");
 
-  await devtools.evaluate('location.hash = "#star-cisco-live"');
+  await devtools.evaluate('location.hash = document.querySelector("#duties-dashboard") ? "#duty-6" : "#star-cisco-live"');
   await delay(100);
   const hashTarget = await devtools.evaluate(`(() => ({
-    exists: Boolean(document.querySelector("#star-cisco-live")),
+    duties: Boolean(document.querySelector("#duties-dashboard")),
+    exists: Boolean(document.querySelector(document.querySelector("#duties-dashboard") ? "#duty-6" : "#star-cisco-live")),
     open: document.querySelector("#star-cisco-live")?.open
   }))()`);
-  assert(hashTarget.exists && hashTarget.open, "Deep link did not expose the nested STAR target.");
+  assert(
+    hashTarget.exists && (hashTarget.duties || hashTarget.open),
+    "Deep link did not expose the expected target."
+  );
 
   await devtools.send("Emulation.setDeviceMetricsOverride", {
     width: 390,
@@ -311,21 +330,23 @@ try {
   assert(print.filteredVisible !== "none", "Print stylesheet preserved an active screen filter.");
   assert(print.disclaimer !== "none", "Print stylesheet omitted the independence disclaimer.");
   await devtools.evaluate('document.querySelector("[data-filter-item].is-filtered").classList.remove("is-filtered")');
-  const cheatPrint = await devtools.evaluate(`(() => {
-    document.body.classList.add("print-cheat-only");
-    return {
-      dashboard: getComputedStyle(document.querySelector("#call-dashboard")).display,
-      cheat: getComputedStyle(document.querySelector("#cheat-sheet")).display
-    };
-  })()`);
-  assert(cheatPrint.dashboard === "none" && cheatPrint.cheat !== "none", "Cheat-sheet-only print mode did not isolate the sheet.");
-  const cheatPdf = await devtools.send("Page.printToPDF", {
-    printBackground: true,
-    preferCSSPageSize: true
-  });
-  const cheatPages = (Buffer.from(cheatPdf.data, "base64").toString("latin1").match(/\/Type\s*\/Page\b/g) || []).length;
-  assert(cheatPages === 1, `Cheat sheet rendered to ${cheatPages} print pages instead of one.`);
-  await devtools.evaluate('document.body.classList.remove("print-cheat-only")');
+  if (!initial.isDuties) {
+    const cheatPrint = await devtools.evaluate(`(() => {
+      document.body.classList.add("print-cheat-only");
+      return {
+        dashboard: getComputedStyle(document.querySelector("#call-dashboard")).display,
+        cheat: getComputedStyle(document.querySelector("#cheat-sheet")).display
+      };
+    })()`);
+    assert(cheatPrint.dashboard === "none" && cheatPrint.cheat !== "none", "Cheat-sheet-only print mode did not isolate the sheet.");
+    const cheatPdf = await devtools.send("Page.printToPDF", {
+      printBackground: true,
+      preferCSSPageSize: true
+    });
+    const cheatPages = (Buffer.from(cheatPdf.data, "base64").toString("latin1").match(/\/Type\s*\/Page\b/g) || []).length;
+    assert(cheatPages === 1, `Cheat sheet rendered to ${cheatPages} print pages instead of one.`);
+    await devtools.evaluate('document.body.classList.remove("print-cheat-only")');
+  }
   await devtools.send("Emulation.setEmulatedMedia", { media: "screen" });
   await devtools.send("Emulation.clearDeviceMetricsOverride");
 
@@ -363,7 +384,7 @@ try {
   assert(devtools.exceptions.length === 0, `Browser raised exceptions: ${devtools.exceptions.join("; ")}`);
   await devtools.send("Browser.close");
   console.log(
-    `Browser smoke passed: ${initial.cards} cards, search/category/theme/progress/expand/deep-link interactions, ` +
+    `Browser smoke passed (${initial.isDuties ? "duties" : "home"}): ${initial.cards} cards, search/category/theme/progress/expand/deep-link interactions, ` +
       "mobile layout, print layout, and no uncaught exceptions."
   );
 } finally {
