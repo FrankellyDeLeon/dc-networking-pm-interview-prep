@@ -1,14 +1,16 @@
-# Private Data Center Networking PM interview preparation
+# Data Center Networking PM interview preparation
 
-Private, local-only, single-page preparation guide for a 15-minute hiring-manager conversation about Cisco's
+Public, single-page preparation guide for a 15-minute hiring-manager conversation about Cisco's
 Senior / Engineering Product Manager, Data Center Networking role. It combines a call dashboard, role traceability,
 candidate evidence checks, AI and enterprise data-center networking study material, product/commercial frameworks,
 tailored interview stories, and a reviewed source register.
 
-> **Privacy warning:** this repository contains personal interview preparation. **Do not enable GitHub Pages**, add a
-> `CNAME`, create a Pages deployment workflow, mirror the repository publicly, or publish generated PDFs while personal
-> material remains. The site is intentionally not deployed. Keep the repository private and review repository access
-> before pushing changes.
+**Published site:** <https://frankellydeleon.github.io/dc-networking-pm-interview-prep/>
+
+> **Public-content warning:** this repository and its GitHub Pages site are public by explicit owner choice. Do not add
+> customer/Cisco confidential information, secrets, private roadmap details, or personal claims that should not be
+> publicly accessible. `[VERIFY]` and `[ADD YOUR FACT]` prompts must be resolved or consciously retained before sharing
+> answers outside personal preparation.
 
 ## Local preview
 
@@ -33,7 +35,7 @@ that browser's local storage. Clicking a source link leaves the local site and c
 | `index.html` | All interview, technical, commercial, traceability, source, and integrity content |
 | `styles.css` | Responsive visual design, accessibility states, diagrams, dark theme, and print layout |
 | `app.js` | Dependency-free local interactions and readiness persistence |
-| `scripts/validate.mjs` | Structural, content, citation, syntax, placeholder, dependency, and privacy checks |
+| `scripts/validate.mjs` | Structural, content, citation, syntax, placeholder, dependency, and publication checks |
 | `scripts/browser-smoke.mjs` | Optional Chrome/Edge interaction, responsive, print, and screenshot smoke test |
 
 ## Validation
@@ -53,7 +55,8 @@ The default deterministic pass checks:
 - citation-to-source integrity and source reviewed dates;
 - intentional `[VERIFY]` / `[ADD YOUR FACT]` prompts, with no `TODO`/`TBD` residue;
 - JavaScript syntax and absence of external runtime network calls/dependencies;
-- the README privacy warning and absence of Pages workflows/configuration or `CNAME`.
+- the README public-content warning and expected GitHub Pages URL;
+- absence of an unexpected custom domain or deployment workflow (Pages uses the repository's `main` branch and root).
 
 The optional link pass performs live requests. Some publishers block automation or rate-limit requests, so
 `401`, `403`, and `429` are reported/accepted as access-controlled reachability; timeouts and other response failures are

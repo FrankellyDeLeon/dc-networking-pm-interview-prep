@@ -53,7 +53,7 @@ const readme = files["README.md"];
 if (!/^<!doctype html>/i.test(html.trimStart())) fail("index.html must start with an HTML5 doctype");
 if (!/<html\b[^>]*\blang="en"/i.test(html)) fail("The html element must declare lang=\"en\"");
 if (!/<meta\b[^>]*name="viewport"/i.test(html)) fail("Missing viewport meta");
-if (!/<meta\b[^>]*http-equiv="Content-Security-Policy"/i.test(html)) fail("Missing local-only Content Security Policy");
+if (!/<meta\b[^>]*http-equiv="Content-Security-Policy"/i.test(html)) fail("Missing Content Security Policy");
 if (!/<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex[^"]*nofollow/i.test(html)) {
   fail("Missing noindex,nofollow robots safeguard");
 }
@@ -166,8 +166,11 @@ if (externalRuntime.length) fail("External runtime dependency detected in index.
 if (/@import\s+url\(\s*https?:/i.test(files["styles.css"])) fail("External CSS import detected");
 if (/\b(fetch|XMLHttpRequest|WebSocket)\s*\(/.test(files["app.js"])) fail("app.js must not make runtime network requests");
 
-if (!/Do not enable GitHub Pages/i.test(readme)) fail("README must explicitly warn against enabling GitHub Pages");
-if (!/private/i.test(readme) || !/local/i.test(readme)) fail("README must explain private, local-only use");
+if (!/Public-content warning/i.test(readme)) fail("README must explain that published content is publicly accessible");
+if (!/https:\/\/frankellydeleon\.github\.io\/dc-networking-pm-interview-prep\//i.test(readme)) {
+  fail("README must include the expected GitHub Pages URL");
+}
+if (!/local preview/i.test(readme)) fail("README must retain local-preview instructions");
 
 async function walk(directory) {
   const results = [];
@@ -182,11 +185,15 @@ async function walk(directory) {
 
 const repositoryFiles = await walk(root);
 for (const file of repositoryFiles) {
-  if (/^CNAME$/i.test(file)) fail("CNAME would enable public hosting and is prohibited");
-  if (/^\.github\/workflows\/.*pages.*\.ya?ml$/i.test(file)) fail(`GitHub Pages workflow is prohibited: ${file}`);
+  if (/^CNAME$/i.test(file)) fail("Unexpected custom Pages domain; this site should use the documented github.io URL");
+  if (/^\.github\/workflows\/.*pages.*\.ya?ml$/i.test(file)) {
+    fail(`Unexpected Pages workflow; deployment should use the configured main-branch source: ${file}`);
+  }
   if (/^\.github\/workflows\/.*\.ya?ml$/i.test(file)) {
     const workflow = await readFile(path.join(root, file), "utf8");
-    if (/pages|deploy-pages|github-pages/i.test(workflow)) fail(`Pages-related workflow content is prohibited: ${file}`);
+    if (/pages|deploy-pages|github-pages/i.test(workflow)) {
+      fail(`Unexpected Pages workflow content; deployment should use the configured main-branch source: ${file}`);
+    }
   }
 }
 
@@ -217,14 +224,14 @@ if (process.argv.includes("--check-links")) {
           method: "HEAD",
           redirect: "follow",
           signal: controller.signal,
-          headers: { "user-agent": "private-dcn-prep-link-check/1.0" }
+          headers: { "user-agent": "dcn-prep-link-check/1.0" }
         });
         if (response.status === 405) {
           response = await fetch(url, {
             method: "GET",
             redirect: "follow",
             signal: controller.signal,
-            headers: { "user-agent": "private-dcn-prep-link-check/1.0", range: "bytes=0-1024" }
+            headers: { "user-agent": "dcn-prep-link-check/1.0", range: "bytes=0-1024" }
           });
         }
         if (!(response.ok || [401, 403, 429].includes(response.status))) {
